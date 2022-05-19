@@ -12,11 +12,26 @@ class HomeView extends GetView<HomeController> {
         title: Text('HomeView'),
         centerTitle: true,
       ),
-      body: Center(
-        child: Text(
-          'HomeView is working',
-          style: TextStyle(fontSize: 20),
-        ),
+      body: Column(
+        children: [
+          ElevatedButton(
+            onPressed: () {
+              print("clicked");
+              controller.insert();
+            },
+            child: Text("clicked"),
+
+          ),
+
+          ElevatedButton(
+            onPressed: () {
+              print("clicked");
+              controller.read();
+            },
+            child: Text("clicked"),
+
+          ),
+        ],
       ),
     );
   }
